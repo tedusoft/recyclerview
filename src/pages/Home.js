@@ -25,8 +25,8 @@ function Home({ pageData }) {
 	const imgitems = pageData.screenshots.map((imgSrc) => {
 		return {
 			renderItem: RoundedImage,
-			thumbnail: imgSrc,
-			original: imgSrc,
+			thumbnail: `${process.env.PUBLIC_URL}/${imgSrc}`,
+			original: `${process.env.PUBLIC_URL}/${imgSrc}`,
 		};
 	});
 	return (

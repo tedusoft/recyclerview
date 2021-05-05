@@ -19,12 +19,12 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch("/data/Pages.json")
+		fetch(`${process.env.PUBLIC_URL}/data/Pages.json`)
 			.then((res) => res.json())
 			.then((res) => {
 				this.setState({ pages: res });
 				const promises = res.components.map((strComponent) => {
-					return fetch(`/data/${strComponent}.json`)
+					return fetch(`${process.env.PUBLIC_URL}/data/${strComponent}.json`)
 						.then((res) => res.json())
 						.then((res) => {
 							return this.setState({
@@ -45,7 +45,7 @@ class App extends Component {
 				spinnerColor="#7D88B2"
 				textColor="#7D88B2"
 				text="Wait while data is loading..."
-				logoSrc="/images/icon.svg"
+				logoSrc={`${process.env.PUBLIC_URL}/images/icon.svg`}
 			/>
 		) : (
 			<div>

@@ -279,7 +279,7 @@ const mapBlocks = (blocks, id, name) => {
 									<React.Fragment>
 										<img
 											style={{ overflow: "hidden" }}
-											src={`/images/${name}/${block.name}.png`}
+											src={`${process.env.PUBLIC_URL}/images/${name}/${block.name}.png`}
 											className="img-thumbnail ml-3 mb-2"
 											alt={block.name}
 										/>
