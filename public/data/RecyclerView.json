@@ -1,0 +1,613 @@
+{
+	"name": "recyclerview",
+	"title": "RecyclerView",
+	"content": {
+		"overview": "RecyclerView makes it easy to efficiently display large sets of data. You supply the data and define how each item looks, and the RecyclerView library dynamically creates the elements when they're needed.As the name implies, RecyclerView recycles those individual elements. When an item scrolls off the screen, RecyclerView doesn't destroy its view. Instead, RecyclerView reuses the view for new items that have scrolled onscreen. This reuse vastly improves performance, improving your app's responsiveness and reducing power consumption.",
+		"source": "https://developer.android.com/guide/topics/ui/layout/recyclerview",
+		"blocks": {
+			"events": [
+				{
+					"name": "OnWidgetClicked",
+					"description": "Event generated when any widget is clicked.For this event to be fired by a widget, it must have the respective property,\"Clickable\".",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						},
+						{
+							"name": "widgetName",
+							"type": "Text"
+						},
+						{
+							"name": "group",
+							"type": "Group"
+						}
+					]
+				},
+				{
+					"name": "OnWidgetLongClicked",
+					"description": "Event generated when any widget is long clicked.For this event to be fired by a widget, it must have the respective property,\"Clickable\".",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						},
+						{
+							"name": "widgetName",
+							"type": "Text"
+						},
+						{
+							"name": "group",
+							"type": "Group"
+						}
+					]
+				},
+				{
+					"name": "OnBindingRequest",
+					"description": "Event launched when a group changes its position and needs to update its widgets.",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						},
+						{
+							"name": "listItem",
+							"type": "Any"
+						},
+						{
+							"name": "group",
+							"type": "Group"
+						},
+						{
+							"name": "viewType",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "OnBindingCustomView",
+					"description": "Event fired when the custom widget that is optionally configured in the RecyclerView is visible on the screen or needs to be updated."
+				},
+				{
+					"name": "FastScrolled",
+					"description": "Event launched when the \"Listenable Scroll\" method finished and the group being navigated to is already visible on the screen.",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "ItemSwiped",
+					"description": "Event launched when a group triggers a swipe action.Indicates whether the action corresponds to the right or left side.",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						},
+						{
+							"name": "left",
+							"type": "Boolean"
+						},
+						{
+							"name": "right",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "MultiSelectionOptionSelected",
+					"description": "Event triggered when an option is selected in multiple selection mode.",
+					"params": [
+						{
+							"name": "title",
+							"type": "Text"
+						},
+						{
+							"name": "selectedItems",
+							"type": "List"
+						}
+					]
+				}
+			],
+			"methods": [
+				{
+					"name": "AddSelectionIconOption",
+					"description": "Adds options with icons to the multi-selection bar.",
+					"info": [
+						"These options will be added to the selection bar.",
+						"The icon is the name of a file in assets or the path to an image file."
+					],
+					"params": [
+						{
+							"name": "title",
+							"type": "Text"
+						},
+						{
+							"name": "icon",
+							"type": "Text"
+						}
+					]
+				},
+				{
+					"name": "AddSelectionOption",
+					"description": "Adds options to the multi-selection bar.",
+					"info": [
+						"An option to select all items can be set with the SelectAllTitle property."
+					],
+					"params": [
+						{
+							"name": "title",
+							"type": "Text"
+						}
+					]
+				},
+				{
+					"name": "Build",
+					"description": "Finishes with the recyclerview configuration and adds it inside the specified component.",
+					"info": [
+						"It is preferable not to add it inside a Scroll Arrangement, but it can be added inside a Swipe Refresh Layout or other arrangement."
+					],
+					"params": [
+						{
+							"name": "component",
+							"type": "Component"
+						},
+						{
+							"name": "data",
+							"type": "List"
+						}
+					]
+				},
+				{
+					"name": "GetCurrentScrollPixels",
+					"description": "Returns the offset position the recyclerview is currently in, the value is returned in pixels."
+				},
+				{
+					"name": "GetGroupForPosition",
+					"description": "Returns the group corresponding to an adapter position (linked to the number of items in the data list). It will only return a valid position if the corresponding group is visible on the screen.",
+					"info": [
+						"It should be used when we are sure that the item corresponding to the position is visible on the screen, for example after using the ListenableScroll method."
+					],
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "GetLastSyncedWidget",
+					"description": "Returns the last widget synced with the RecyclerView.",
+					"info": [
+						"The returned widget cannot be edited with the Kodular blocks, but it does allow it to be used with extensions such as the Widget Animator or widget Screenshot."
+					]
+				},
+				{
+					"name": "GetRootName",
+					"description": "Returns a name that is used to identify the first widget to be added to the RecyclerView model.",
+					"info": [
+						"This block tells the RecyclerView that it is starting to create the model."
+					]
+				},
+				{
+					"name": "GetScrollRangePixels",
+					"description": "Returns the maximum scroll position of the RecyclerView. It is returned in pixels."
+				},
+				{
+					"name": "ListenableScrollTo",
+					"description": "Causes the RecyclerView to go to a certain position and calls the FastScroll event when it is done scrolling.",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "NotifyDataSetChanged",
+					"description": "Notifies the recyclerview that a change occurred in the data list, because of this, it will have to update the widgets."
+				},
+				{
+					"name": "ScrollTo",
+					"description": "Causes the RecyclerView to scroll to the specified position. It does not notify when it is done.",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetCustomView",
+					"description": "Sets the component that will be displayed among the RecyclerView items.",
+					"params": [
+						{
+							"name": "component",
+							"type": "Component"
+						}
+					]
+				},
+				{
+					"name": "SetGridManager",
+					"description": "Sets the layout manager to Grid, so that the items in the RecyclerView will be displayed with columns or rows, depending on the orientation.",
+					"params": [
+						{
+							"name": "spanCount",
+							"type": "Number"
+						},
+						{
+							"name": "reverse",
+							"type": "Boolean"
+						},
+						{
+							"name": "portrait",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetListManager",
+					"description": "Sets the layout manager to List, so the items in the RecyclerView will be listed horizontally or vertically depending on the orientation.",
+					"params": [
+						{
+							"name": "reverse",
+							"type": "Boolean"
+						},
+						{
+							"name": "startFromBottom",
+							"type": "Boolean"
+						},
+						{
+							"name": "portrait",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetScrollListener",
+					"description": "It establishes the procedure that is responsible for listening to the changes of state when scrolling in the RecyclerView.",
+					"params": [
+						{
+							"name": "procedure",
+							"type": "Text"
+						}
+					],
+					"info": [
+						"The addresses are automatically detected depending on the layout manager.",
+						"In a horizontal manager the procedure should have the following parameters: [canScrollToLeft, canScrollToRight, isIddle]",
+						"In a vertical manager they should be: [canScrollToTop, canScrollToBottom, isIddle]",
+						"The isIddle parameter refers to whether the RecyclerView is idle."
+					]
+				},
+				{
+					"name": "SetStaggeredGridManager",
+					"description": "Sets the layout manager as a staggered grid. It will be displayed in columns or rows depending on the orientation.",
+					"params": [
+						{
+							"name": "spanCount",
+							"type": "Number"
+						},
+						{
+							"name": "reverse",
+							"type": "Boolean"
+						},
+						{
+							"name": "portrait",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetSwipeForViewTypes",
+					"description": "It establishes in which direction or in which directions each type of view can be scrolled.",
+					"params": [
+						{
+							"name": "types",
+							"type": "Text"
+						}
+					],
+					"info": [
+						"The letters l, r, and b are used to indicate the left, right, and both sides respectively.",
+						"Rules structure:\n[view-type]:[side]\nExample:\"4: l, 5: r, 6: b\""
+					]
+				},
+				{
+					"name": "SetViewTypeProvider",
+					"description": "It establishes the procedure that is in charge of returning the type of view according to the position that the RecyclerView returns.",
+					"params": [
+						{
+							"name": "procedure",
+							"type": "Text"
+						}
+					],
+					"info": [
+						"The procedure must have the parameters [position, listItem]",
+						"It must return a type of view, it must be one created previously."
+					]
+				},
+				{
+					"name": "SmoothScrollTo",
+					"description": "Causes the RecyclerView to scroll smoothly to a specific position.",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					],
+					"info": ["It does not notify any event if it finished with its task."]
+				},
+				{
+					"name": "Sync",
+					"description": "It is mainly used when configuring the RecyclerView for the first time, it tells all the components that depend on it that this RecyclerView is currently being worked on."
+				},
+				{
+					"name": "SyncWidget",
+					"description": "Synchronizes a widget with the RecyclerView. It is mainly used to edit the widgets.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "group",
+							"type": "Group"
+						}
+					]
+				},
+				{
+					"name": "SyncWithViewType",
+					"description": "Synchronizes the RecyclerView and also introduce a new type of view in it.",
+					"params": [
+						{
+							"name": "viewType",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "UpdateData",
+					"description": "Changes the data list bound to the RecyclerView, notifies you that it should be redrawn according to the new list.",
+					"params": [
+						{
+							"name": "list",
+							"type": "List"
+						}
+					]
+				},
+				{
+					"name": "UpdateVisibleItem",
+					"description": "Notifies the RecyclerView that it has to redraw an item regardless of whether the linked list underwent a change.",
+					"params": [
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "DividerColor",
+					"description": "Sets the color of the division between the groups.",
+					"paramTypes": ["Color"],
+					"defValue": "#FFC107",
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"]
+				},
+				{
+					"name": "DividerSize",
+					"description": "Sets the height/width of the division between the groups.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"]
+				},
+				{
+					"name": "CustomView",
+					"description": "Sets whether the RecyclerView will show a component among its groups.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"]
+				},
+				{
+					"name": "CustomViewItemsOffset",
+					"description": "Sets the number of items to be displayed before displaying the set component.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"]
+				},
+				{
+					"name": "MultiSelection",
+					"description": "Sets whether multi-selection is enabled.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"]
+				},
+				{
+					"name": "MultiSelectionSuffix",
+					"description": "Sets the text that will be displayed after the number of items selected in the selection bar.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"defValue": " items"
+				},
+				{
+					"name": "SelectAllTitle",
+					"description": "Sets the title of the option button to make a selection of all items.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"defValue": "SELECT ALL"
+				},
+				{
+					"name": "MultiSelectionOpacity",
+					"description": "Sets the opacity of the group when it is selected.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"defValue": "0.5",
+					"info": ["Values range from 0.0 to 1.0"]
+				},
+				{
+					"name": "MultiSelectionColor",
+					"description": "Sets the background color of the group when selected.",
+					"paramTypes": ["Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"defValue": "#000000"
+				},
+				{
+					"name": "SwipeActions",
+					"description": "Specifies whether swipe actions will be available to the RecyclerView.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"defValue": "False"
+				},
+				{
+					"name": "SwipeDirection",
+					"description": "Specify the available sides to trigger swipe actions. \"Left, Right and Both\".",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer"],
+					"defValue": "Left",
+					"info": [
+						"Sides can be specified for each view type with the \"SetSwipeForViewTypes\" method."
+					]
+				},
+				{
+					"name": "SwipeThreshold",
+					"description": "The fraction that the user should move the group to be considered as swiped.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"defValue": "0.5",
+					"info": [
+						"Values range from 0.0 to 1.0",
+						"The fraction is calculated with respect to RecyclerView's bounds."
+					]
+				},
+				{
+					"name": "SwipeVelocityThreshold",
+					"description": "Defines the maximum velocity ItemTouchHelper will ever calculate for pointer movements.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"defValue": "1.0",
+					"info": [
+						"Values range from 0.0 to 1.0.",
+						"If you increase the value, it will be easier for the user to swipe diagonally and if you decrease the value, user will need to make a rather straight finger movement to trigger a swipe."
+					]
+				},
+				{
+					"name": "SwipeLeftSideColor",
+					"description": "Specifies the background color of the action on the left side.",
+					"paramTypes": ["Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer"],
+					"defValue": "#000000"
+				},
+				{
+					"name": "SwipeRightSideColor",
+					"description": "Specifies the background color of the action on the right side.",
+					"paramTypes": ["Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer"],
+					"defValue": "#000000"
+				},
+				{
+					"name": "SwipeLeftRevealColor",
+					"description": "Specifies the color of the wave that indicates that the action on the left side is considered to be launched.",
+					"paramTypes": ["Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer"],
+					"defValue": "#000000"
+				},
+				{
+					"name": "SwipeRightRevealColor",
+					"description": "Specifies the color of the wave that indicates that the action on the right side is considered to be launched.",
+					"paramTypes": ["Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer"],
+					"defValue": "#000000"
+				},
+				{
+					"name": "SwipeLeftSideIcon",
+					"description": "Specifies the image file name that the RecyclerView will display in the action on the left side.",
+					"paramTypes": ["Asset"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"info": [
+						"The file must be located in the assets of the project. Only the name plus the extension should be entered.",
+						"If the image is too large it will be resized."
+					]
+				},
+				{
+					"name": "SwipeRightSideIcon",
+					"description": "Specifies the image file name that the RecyclerView will display in the action on the right side.",
+					"paramTypes": ["Asset"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"]
+				},
+				{
+					"name": "Visible",
+					"description": "Specifies RecyclerView visibility.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"]
+				},
+				{
+					"name": "FixedSize",
+					"description": "Specifies whether the RecyclerView will have a fixed size.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"info": [
+						"If enabled, the size of the RecyclerView does not depend on its children. This means that it does not have to be constantly resized, thus preventing performance variations."
+					]
+				},
+				{
+					"name": "BackgroundColor",
+					"description": "Sets the background color of the RecyclerView.",
+					"paramTypes": ["Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"defValue": "#000000"
+				},
+				{
+					"name": "BackgroundAsset",
+					"description": "Sets the background image of the RecyclerView.",
+					"paramTypes": ["Asset"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"info": [
+						"The file must be located in the assets of the project. Only the name plus the extension should be entered."
+					]
+				},
+				{
+					"name": "Width",
+					"description": "Sets the width of the RecyclerView.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"info": [
+						"Allowed values are Automatic and FillParent",
+						"To specify a different size, change it in the component where the RecyclerView will be created."
+					]
+				},
+				{
+					"name": "Height",
+					"description": "Sets the height of the RecyclerView.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Designer", "Blocks"],
+					"info": [
+						"Allowed values are Automatic and FillParent",
+						"To specify a different size, change it in the component where the RecyclerView will be created."
+					]
+				}
+			]
+		}
+	}
+}

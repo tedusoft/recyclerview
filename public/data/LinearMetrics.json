@@ -1,0 +1,113 @@
+{
+	"name": "linearmetrics",
+	"title": "LinearMetrics",
+	"group": "Widgets",
+	"content": {
+		"overview": "It allows to model an object that specifies the measurements for widgets whose parents are ZLinear Widgets.",
+		"blocks": {
+			"methods": [
+				{
+					"name": "BuildProps",
+					"description": "Returns a new property set containing the previously defined properties."
+				},
+				{
+					"name": "SetBuildInMetrics",
+					"description": "Changes the measurements configured in the widget.",
+					"params": [
+						{
+							"name": "width",
+							"type": "Number"
+						},
+						{
+							"name": "height",
+							"type": "Number"
+						},
+						{
+							"name": "weight",
+							"type": "Number"
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "MarginLeft",
+					"description": "Specifies the extra space on the left side of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MarginRight",
+					"description": "Specifies the extra space on the right side of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MarginTop",
+					"description": "Specifies the extra space on the top side of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MarginBottom",
+					"description": "Specifies the extra space on the bottom side of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Margin",
+					"description": "Specifies the extra space for all sides of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"It should be used when all the extra spaces should be the same.",
+						"Replaces all independent margin values."
+					]
+				},
+				{
+					"name": "Width",
+					"description": "Specifies the width of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Height",
+					"description": "Specifies the height of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "ForceSpace",
+					"description": "Specifies whether the widget should forcibly occupy a space in its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"It can be used when all widgets need to occupy the same space or share space equally regardless of their width or height."
+					]
+				},
+				{
+					"name": "FillParent",
+					"description": "A value that specifies that the widget will occupy all the space in its parent widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "FillAutomatic",
+					"description": "A value that specifies that the widget will occupy only the space that it needs.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				}
+			]
+		}
+	}
+}

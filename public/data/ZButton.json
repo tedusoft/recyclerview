@@ -1,0 +1,167 @@
+{
+	"name": "zbutton",
+	"title": "ZButton",
+	"group": "Widgets",
+	"content": {
+		"overview": "It allows to model a new button widget model.",
+		"blocks": {
+			"methods": [
+				{
+					"name": "New",
+					"description": "Adds a new ZButton model to the model layout of the RecyclerView which is synced.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "parent",
+							"type": "Text"
+						},
+						{
+							"name": "props",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "BuildProps",
+					"description": "Returns a new property set containing the previously defined properties."
+				},
+				{
+					"name": "SetText",
+					"description": "Changes the text of the ZButton widget.",
+					"params": [
+						{
+							"name": "text",
+							"type": "Text"
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "TrailingImage",
+					"description": "Specifies the image to be displayed at the start of the button.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "LeadingImage",
+					"description": "Specifies the image to be displayed at the end of the button.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Label",
+					"description": "Specifies the button text.",
+					"paramTypes": ["Text", "PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"To edit the style of the text you have to place a set of properties exported by the ZLabel object."
+					]
+				},
+				{
+					"name": "Background",
+					"description": "Specifies the background of the widget.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Elevation",
+					"description": "Specifies the elevation of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"The widget displays a shadow according to its elevation.",
+						"In order for the shadow to be displayed, the widget must have a non-transparent background."
+					]
+				},
+				{
+					"name": "LayoutMetrics",
+					"description": "Specifies the set of properties that the parent of the widget will take to create the widget's measures.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingLeft",
+					"description": "Specifies the space between the left edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingRight",
+					"description": "Specifies the space between the right edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingTop",
+					"description": "Specifies the space between the top edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingBottom",
+					"description": "Specifies the space between the bottom edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Padding",
+					"description": "Specifies the space between the edges and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Enabled",
+					"description": "Specifies whether the widget is enabled.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Visible",
+					"description": "Specifies whether the widget is visible (true) or invisible (false).",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Being invisible, it does not occupy any space."]
+				},
+				{
+					"name": "Clickable",
+					"description": "Specifies whether the widget can be clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "LongClickable",
+					"description": "Specifies if the widget can be long clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Alpha",
+					"description": "Specifies the opacity of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Range from 0.0 (0% visible) to 1.0 (100% visible)"]
+				}
+			]
+		}
+	}
+}

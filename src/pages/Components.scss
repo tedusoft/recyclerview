@@ -1,0 +1,16 @@
+@import "../index.scss";
+
+.nav-section {
+	&-active {
+		& div {
+			color: white !important;
+			background-color: $primary !important;
+			border-radius: 15px;
+		}
+	}
+	&-inactive {
+		& div {
+			color: #999999 !important;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import "~font-awesome/css/font-awesome.css";
+$primary: #7d88b2;
+$dark-blue: #5c6482;
+$theme-colors: (
+	"primary": $primary,
+	"dark": $dark-blue,
+	"secondary": $dark-blue,
+);
+$font-size-base: 0.85rem;
+$font-family-base: "Poppins", "sans-serif";
+
+.page {
+	&-enter {
+		transform: translateX(100%);
+	}
+	&-enter-active {
+		transform: translateX(0%);
+		transition: transform 200ms;
+	}
+	&-exit {
+		opacity: 1;
+	}
+	&-exit-active {
+		opacity: 0;
+		transition: opacity 200ms;
+	}
+}
+
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+#root {
+	height: 100%;
+	width: 100%;
+}
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 2px grey;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $dark-blue;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $dark-blue;
+}
+@import "bootstrap/scss/bootstrap.scss";
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
