@@ -1,0 +1,29 @@
+{
+	"HomePage": {
+		"overview": "This extension is the adaptation of the android RecyclerView widget. It is composed of several parts, first the RecyclerView extension, which is the widget that makes it possible to create dynamic lists of any type.On the other hand, there are also various widgets that can be used to build our items.There are also extensions that are compatible with RecyclerView for Kodular, these extensions work as tools to facilitate or provide different additional functionalities.In a very vague summary, it can be said that with RecyclerView any type of lists can be made, but they are not just lists because in reality it makes use of a property called layoutmanager that the RecyclerView has. Through this mentioned property, you can change how the items will be displayed. Currently the extension has implemented:  \"ListView\", \"GridView\" and \"StaggeredGridView\", this means that effectively, we can do more than lists.",
+		"summary": {
+			"source": "https://developer.android.com/guide/topics/ui/layout/recyclerview",
+			"summary": "RecyclerView makes it easy to efficiently display large sets of data. You supply the data and define how each item looks, and the RecyclerView library dynamically creates the elements when they're needed.As the name implies, RecyclerView recycles those individual elements. When an item scrolls off the screen, RecyclerView doesn't destroy its view. Instead, RecyclerView reuses the view for new items that have scrolled onscreen. This reuse vastly improves performance, improving your app's responsiveness and reducing power consumption."
+		},
+		"icon": "",
+		"screenshots": [
+			"/images/screenshots/1.png",
+			"/images/screenshots/2.png",
+			"/images/screenshots/3.png",
+			"/images/screenshots/4.png",
+			"/images/screenshots/5.png",
+			"/images/screenshots/6.png"
+		],
+		"preview": ""
+	},
+	"ComponentsPage": {
+		"overview": "To get RecyclerView to work on Kodular, that mainly requires two extension packages. The most important is RecyclerView, which is responsible for making it possible to use it in the application. Then there is also the Widgets package, which, as its name suggests, makes it possible to add various widgets to design templates."
+	},
+	"components": [
+		"RecyclerView",
+		"Background",
+		"LinearMetrics",
+		"StackMetrics",
+		"ZButton"
+	]
+}

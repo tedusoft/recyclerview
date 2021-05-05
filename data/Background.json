@@ -1,0 +1,218 @@
+{
+	"name": "background",
+	"title": "Background",
+	"group": "Widgets",
+	"content": {
+		"overview": "Creates a background for widgets. The properties are used to create the style of the widgets. The methods are used when the widgets have already been created.",
+		"blocks": {
+			"methods": [
+				{
+					"name": "BuildProps",
+					"description": "Returns a new property set containing the previously defined properties."
+				},
+				{
+					"name": "SetColor",
+					"description": "Changes the background color of the widget.",
+					"params": [
+						{
+							"name": "color",
+							"type": "Text"
+						},
+						{
+							"name": "color",
+							"type": "Color"
+						}
+					]
+				},
+				{
+					"name": "SetTintColor",
+					"description": "Applies a color to the background.",
+					"params": [
+						{
+							"name": "color",
+							"type": "Text"
+						},
+						{
+							"name": "color",
+							"type": "Color"
+						}
+					],
+					"info": [
+						"Unlike the SetColor method, this one will apply a color over the entire background, including the edges."
+					]
+				},
+				{
+					"name": "SetColors",
+					"description": "Changes the background colors.",
+					"params": [
+						{
+							"name": "colors",
+							"type": "List"
+						}
+					],
+					"info": [
+						"Like the Colors property, it needs a list of Text (HTML Colors) or Colors."
+					]
+				},
+				{
+					"name": "SetStroke",
+					"description": "Changes the borders of the background.",
+					"params": [
+						{
+							"name": "width",
+							"type": "Number"
+						},
+						{
+							"name": "color",
+							"type": "Text"
+						},
+						{
+							"name": "color",
+							"type": "Color"
+						}
+					]
+				},
+				{
+					"name": "SetFileSource",
+					"description": "Changes the background image.",
+					"params": [
+						{
+							"name": "src",
+							"type": "Text"
+						}
+					],
+					"info": [
+						"Unlike the corresponding property, this method does accept URLs."
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "Color",
+					"description": "Sets the background color.",
+					"paramTypes": ["Text", "Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Colors",
+					"description": "Sets the background colors.",
+					"paramTypes": ["List"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"This property sets a gradient as the background.",
+						"The items in the list are colors, Text and Colors are supported."
+					]
+				},
+				{
+					"name": "BorderWidth",
+					"description": "Sets the thickness of the background edges.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "RippleColor",
+					"description": "Sets the color of the wave that is activated when the widget is pressed.",
+					"paramTypes": ["Text", "Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"For the wave effect to show, the widget needs to be clickable."
+					]
+				},
+				{
+					"name": "BorderColor",
+					"description": "Sets the color of the background borders.",
+					"paramTypes": ["Text", "Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "BorderRadius",
+					"description": "Sets the radius of the corners of the bottom.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "GradientDirection",
+					"description": "Sets the direction of the gradient.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["The values ​​are obtained from the property blocks."]
+				},
+				{
+					"name": "FileSource",
+					"description": "Sets the image to be displayed in the background.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"The text should be a path to a file or the name of a file found in the assets of the project.",
+						"If this block is used, all other properties will be ignored to only display the image.",
+						"Supports NinePatch images."
+					]
+				},
+				{
+					"name": "TopToBottom",
+					"description": "Gradient Direction.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "BottomToTop",
+					"description": "Gradient Direction.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "LeftToRight",
+					"description": "Gradient Direction.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "RightToLeft",
+					"description": "Gradient Direction.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "BottomLeftTopRight",
+					"description": "Gradient Direction.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "BottomRightTopLeft",
+					"description": "Gradient Direction.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "TopLeftBottomRight",
+					"description": "Gradient Direction.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "TopRightBottomLeft",
+					"description": "Gradient Direction.",
+					"paramTypes": ["GradientDirection"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				}
+			]
+		}
+	}
+}

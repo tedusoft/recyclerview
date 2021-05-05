@@ -1,0 +1,190 @@
+{
+	"name": "stackmetrics",
+	"title": "StackMetrics",
+	"group": "Widgets",
+	"content": {
+		"overview": "It allows to model an object that specifies the measurements for widgets whose parents are ZStack Widgets.",
+		"blocks": {
+			"methods": [
+				{
+					"name": "BuildProps",
+					"description": "Returns a new property set containing the previously defined properties."
+				}
+			],
+			"properties": [
+				{
+					"name": "AlignParentTop",
+					"description": "Specifies whether the widget will be positioned relative to the top area of ​​its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "AlignParentBottom",
+					"description": "Specifies whether the widget will be positioned relative to the bottom area of its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "AlignParentLeft",
+					"description": "Specifies whether the widget will be positioned relative to the left area of its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "AlignParentRight",
+					"description": "Specifies whether the widget will be positioned relative to the right area of its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "AlignParentStart",
+					"description": "Specifies whether the widget will be positioned relative to the start(left top) of its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "AlignParentEnd",
+					"description": "Specifies whether the widget will be positioned relative to the end(right bottom) of its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "CenterInParent",
+					"description": "Specifies whether the widget should be centered on its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "ToLeftOf",
+					"description": "The widget will be positioned relatively to the left side of the indicated widget.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "ToRightOf",
+					"description": "The widget will be positioned relatively to the right side of the indicated widget.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Above",
+					"description": "The widget will be positioned relatively to the top side of the indicated widget.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Below",
+					"description": "The widget will be positioned relatively to the bottom side of the indicated widget.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "CenterHorizontal",
+					"description": "The widget will be centered horizontally on its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "CenterVertical",
+					"description": "The widget will be centered vertically on its parent widget.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "ToStartOf",
+					"description": "The widget will be positioned relatively to the start(top left) of the indicated widget.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "ToEndOf",
+					"description": "The widget will be positioned relatively to the end of the indicated widget.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MarginLeft",
+					"description": "Specifies the extra space on the left side of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MarginRight",
+					"description": "Specifies the extra space on the right side of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MarginTop",
+					"description": "Specifies the extra space on the top side of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MarginBottom",
+					"description": "Specifies the extra space on the bottom side of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Margin",
+					"description": "Specifies the extra space for all sides of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"It should be used when all the extra spaces should be the same.",
+						"Replaces all independent margin values."
+					]
+				},
+				{
+					"name": "Width",
+					"description": "Specifies the width of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Height",
+					"description": "Specifies the height of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "FillParent",
+					"description": "A value that specifies that the widget will occupy all the space in its parent widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "FillAutomatic",
+					"description": "A value that specifies that the widget will occupy only the space that it needs.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				}
+			]
+		}
+	}
+}

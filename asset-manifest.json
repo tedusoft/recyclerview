@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/recyclerview/static/css/main.f29e0967.chunk.css",
+    "main.js": "/recyclerview/static/js/main.04a69f3b.chunk.js",
+    "main.js.map": "/recyclerview/static/js/main.04a69f3b.chunk.js.map",
+    "runtime-main.js": "/recyclerview/static/js/runtime-main.3c9bdbe2.js",
+    "runtime-main.js.map": "/recyclerview/static/js/runtime-main.3c9bdbe2.js.map",
+    "static/css/2.633d8048.chunk.css": "/recyclerview/static/css/2.633d8048.chunk.css",
+    "static/js/2.a6a1b0b1.chunk.js": "/recyclerview/static/js/2.a6a1b0b1.chunk.js",
+    "static/js/2.a6a1b0b1.chunk.js.map": "/recyclerview/static/js/2.a6a1b0b1.chunk.js.map",
+    "static/js/3.e89ecfb4.chunk.js": "/recyclerview/static/js/3.e89ecfb4.chunk.js",
+    "static/js/3.e89ecfb4.chunk.js.map": "/recyclerview/static/js/3.e89ecfb4.chunk.js.map",
+    "index.html": "/recyclerview/index.html",
+    "static/css/2.633d8048.chunk.css.map": "/recyclerview/static/css/2.633d8048.chunk.css.map",
+    "static/css/main.f29e0967.chunk.css.map": "/recyclerview/static/css/main.f29e0967.chunk.css.map",
+    "static/js/2.a6a1b0b1.chunk.js.LICENSE.txt": "/recyclerview/static/js/2.a6a1b0b1.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/recyclerview/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3c9bdbe2.js",
+    "static/css/2.633d8048.chunk.css",
+    "static/js/2.a6a1b0b1.chunk.js",
+    "static/css/main.f29e0967.chunk.css",
+    "static/js/main.04a69f3b.chunk.js"
+  ]
+}
