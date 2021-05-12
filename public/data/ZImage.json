@@ -1,0 +1,268 @@
+{
+	"icon": "picture.png",
+	"title": "ZImage",
+	"group": "Widgets",
+	"content": {
+		"overview": "It allows to model a new image widget model.",
+		"blocks": {
+			"methods": [
+				{
+					"name": "New",
+					"description": "Adds a new ZImage model to the model layout of the RecyclerView which is synced.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "parent",
+							"type": "Text"
+						},
+						{
+							"name": "props",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "BuildProps",
+					"description": "Returns a new property set containing the previously defined properties.",
+					"params": [
+						{
+							"name": "*",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "SetSource",
+					"description": "Loads the image into the widget.",
+					"params": [
+						{
+							"name": "src",
+							"type": "Text"
+						}
+					],
+					"info": [
+						"The image can be loaded from urls, it also supports images in the assets folder or in the storage.",
+						"Supports GIF format."
+					]
+				},
+				{
+					"name": "SetColorFilter",
+					"description": "Changes the filter applied to the image.",
+					"params": [
+						{
+							"name": "color",
+							"type": "Text"
+						},
+						{
+							"name": "color",
+							"type": "Color"
+						}
+					]
+				},
+				{
+					"name": "SetScaleType",
+					"description": "Changes the type of image scaling.",
+					"params": [
+						{
+							"name": "type",
+							"type": "ScaleType"
+						}
+					],
+					"info": [
+						"It does not apply instantly, that is, it is needed to load another image to see the results."
+					]
+				},
+				{
+					"name": "SetScaleRatio",
+					"description": "Change the scaling size of the image.",
+					"params": [
+						{
+							"name": "ratio",
+							"type": "Number"
+						}
+					],
+					"info": [
+						"It does not apply instantly, that is, it is needed to load another image to see the results.",
+						"The range is from 0.1 (image is reduced to 10%) to 1.0 (100% image size)"
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "Source",
+					"description": "Specifies the source of the image to load when the widget is created.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "ColorFilter",
+					"description": "Specifies the filter that will be applied on the images that are loaded in the widget.",
+					"paramTypes": ["Text", "Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "ScaleType",
+					"description": "Specifies the type of image scaling.",
+					"paramTypes": ["ScaleType"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "ScaleRatio",
+					"description": "Specifies the scaling size of the image.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"defValue": "1.0",
+					"info": [
+						"The range is from 0.0 to 1.0, for example with 0.1 the size is reduced to 10% while with 1.0 100% of the size is preserved."
+					]
+				},
+				{
+					"name": "Placeholder",
+					"description": "Specifies an image that is displayed while the actual image is loading.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"It is preferable that the image is in the assets of the project.",
+						"Supports GIF format."
+					]
+				},
+				{
+					"name": "ImageRadius",
+					"description": "Specifies the radius of the image.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"The widget is not cropped, the image to be loaded is cropped."
+					]
+				},
+				{
+					"name": "Background",
+					"description": "Specifies the background of the widget.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Elevation",
+					"description": "Specifies the elevation of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"The widget displays a shadow according to its elevation.",
+						"In order for the shadow to be displayed, the widget must have a non-transparent background."
+					]
+				},
+				{
+					"name": "LayoutMetrics",
+					"description": "Specifies the set of properties that the parent of the widget will take to create the widget's measures.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingLeft",
+					"description": "Specifies the space between the left edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingRight",
+					"description": "Specifies the space between the right edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingTop",
+					"description": "Specifies the space between the top edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingBottom",
+					"description": "Specifies the space between the bottom edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Padding",
+					"description": "Specifies the space between the edges and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Enabled",
+					"description": "Specifies whether the widget is enabled.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Visible",
+					"description": "Specifies whether the widget is visible (true) or invisible (false).",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Being invisible, it does not occupy any space."]
+				},
+				{
+					"name": "Clickable",
+					"description": "Specifies whether the widget can be clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "LongClickable",
+					"description": "Specifies if the widget can be long clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Alpha",
+					"description": "Specifies the opacity of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Range from 0.0 (0% visible) to 1.0 (100% visible)"]
+				},
+				{
+					"name": "CenterCrop",
+					"description": "Returns the type of scaling.",
+					"paramTypes": ["ScaleType"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "CenterInside",
+					"description": "Returns the type of scaling.",
+					"paramTypes": ["ScaleType"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Fit",
+					"description": "Returns the type of scaling.",
+					"paramTypes": ["ScaleType"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				}
+			]
+		}
+	}
+}

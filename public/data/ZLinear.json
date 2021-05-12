@@ -1,0 +1,225 @@
+{
+	"icon": "arrange.png",
+	"title": "ZLinear",
+	"group": "Widgets",
+	"content": {
+		"overview": "It allows to model a new linear widget model.",
+		"blocks": {
+			"methods": [
+				{
+					"name": "New",
+					"description": "Adds a new ZLinear model to the model layout of the RecyclerView which is synced.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "parent",
+							"type": "Text"
+						},
+						{
+							"name": "props",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "BuildProps",
+					"description": "Returns a new property set containing the previously defined properties.",
+					"params": [
+						{
+							"name": "*",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "SetHorizontalGravity",
+					"description": "This method changes the horizontal gravity of the widget.",
+					"params": [
+						{
+							"name": "gravity",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetVerticalGravity",
+					"description": "This method changes the vertical gravity of the widget.",
+					"params": [
+						{
+							"name": "gravity",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetDirection",
+					"description": "This method changes the direction of the widget.",
+					"params": [
+						{
+							"name": "direction",
+							"type": "Number"
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "Direction",
+					"description": "Specifies the direction of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "HorizontalGravity",
+					"description": "Specifies the horizontal gravity of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "VerticalGravity",
+					"description": "SSpecifies the vertical gravity of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Background",
+					"description": "Specifies the background of the widget.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Elevation",
+					"description": "Specifies the elevation of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"The widget displays a shadow according to its elevation.",
+						"In order for the shadow to be displayed, the widget must have a non-transparent background."
+					]
+				},
+				{
+					"name": "LayoutMetrics",
+					"description": "Specifies the set of properties that the parent of the widget will take to create the widget's measures.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingLeft",
+					"description": "Specifies the space between the left edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingRight",
+					"description": "Specifies the space between the right edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingTop",
+					"description": "Specifies the space between the top edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingBottom",
+					"description": "Specifies the space between the bottom edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Padding",
+					"description": "Specifies the space between the edges and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Enabled",
+					"description": "Specifies whether the widget is enabled.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Visible",
+					"description": "Specifies whether the widget is visible (true) or invisible (false).",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Being invisible, it does not occupy any space."]
+				},
+				{
+					"name": "Clickable",
+					"description": "Specifies whether the widget can be clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "LongClickable",
+					"description": "Specifies if the widget can be long clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Alpha",
+					"description": "Specifies the opacity of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Range from 0.0 (0% visible) to 1.0 (100% visible)"]
+				},
+				{
+					"name": "GravityStart",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "GravityEnd",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "GravityCenter",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "DirectionHorizontal",
+					"description": "Linear Direction.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "DirectionVertical",
+					"description": "Linear Direction.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,280 @@
+{
+	"icon": "view.png",
+	"title": "ZView",
+	"group": "Widgets",
+	"content": {
+		"overview": "It allows to model a new widget model. The methods in this component can be applied in any widget.",
+		"blocks": {
+			"methods": [
+				{
+					"name": "New",
+					"description": "Adds a new ZView model to the model layout of the RecyclerView which is synced.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "parent",
+							"type": "Text"
+						},
+						{
+							"name": "props",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "BuildProps",
+					"description": "Returns a new property set containing the previously defined properties.",
+					"params": [
+						{
+							"name": "*",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "DefaultProps",
+					"description": "Returns an empty property set.",
+					"params": [
+						{
+							"name": "*",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "SetElevation",
+					"description": "Changes the elevation of the widget.",
+					"params": [
+						{
+							"name": "elevation",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPaddingLeft",
+					"description": "This method changes the left padding of the widget.",
+					"params": [
+						{
+							"name": "paddingLeft",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPaddingTop",
+					"description": "This method changes the top padding of the widget.",
+					"params": [
+						{
+							"name": "paddingTop",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPaddingRight",
+					"description": "This method changes the right padding of the widget.",
+					"params": [
+						{
+							"name": "paddingRight",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPaddingBottom",
+					"description": "This method changes the bottom padding of the widget.",
+					"params": [
+						{
+							"name": "paddingBottom",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPadding",
+					"description": "This method changes the padding of the widget.",
+					"params": [
+						{
+							"name": "padding",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetEnabled",
+					"description": "This method sets the widget as enabled or disabled.",
+					"params": [
+						{
+							"name": "enabled",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetVisible",
+					"description": "This method changes the visibility of the widget.",
+					"params": [
+						{
+							"name": "visibility",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetClickable",
+					"description": "This method changes if the widget responds to click events.",
+					"params": [
+						{
+							"name": "clickable",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetLongClickable",
+					"description": "This method changes if the widget responds to long click events.",
+					"params": [
+						{
+							"name": "longClickable",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetAlpha",
+					"description": "This method changes the opacity of the widget.",
+					"params": [
+						{
+							"name": "alpha",
+							"type": "Number"
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "Background",
+					"description": "Specifies the background of the widget.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Elevation",
+					"description": "Specifies the elevation of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"The widget displays a shadow according to its elevation.",
+						"In order for the shadow to be displayed, the widget must have a non-transparent background."
+					]
+				},
+				{
+					"name": "LayoutMetrics",
+					"description": "Specifies the set of properties that the parent of the widget will take to create the widget's measures.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingLeft",
+					"description": "Specifies the space between the left edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingRight",
+					"description": "Specifies the space between the right edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingTop",
+					"description": "Specifies the space between the top edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingBottom",
+					"description": "Specifies the space between the bottom edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Padding",
+					"description": "Specifies the space between the edges and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Enabled",
+					"description": "Specifies whether the widget is enabled.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Visible",
+					"description": "Specifies whether the widget is visible (true) or invisible (false).",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Being invisible, it does not occupy any space."]
+				},
+				{
+					"name": "Clickable",
+					"description": "Specifies whether the widget can be clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "LongClickable",
+					"description": "Specifies if the widget can be long clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Alpha",
+					"description": "Specifies the opacity of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Range from 0.0 (0% visible) to 1.0 (100% visible)"]
+				},
+				{
+					"name": "Visible*",
+					"description": "Widget visibility.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Invisible",
+					"description": "Widget visibility.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Gone",
+					"description": "Widget visibility.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				}
+			]
+		}
+	}
+}

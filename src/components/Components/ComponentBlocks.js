@@ -37,6 +37,7 @@ export default function ComponentBlocks({ component }) {
 			},
 			errorMessage: "Item not found.",
 		});
+
 		return () => {
 			setConfig({
 				showSearchBar: false,
@@ -65,19 +66,24 @@ export default function ComponentBlocks({ component }) {
 									<BreadcrumbItem active>{component.title}</BreadcrumbItem>
 								</Breadcrumb>
 							</Col>
-							<Col xs="12" id="Overview">
+							<Col xs="12" id="Overview" className="mb-3">
 								<h2>Overview</h2>
 								<hr />
 								<p className="text-justify">{component.content.overview}</p>
 								{component.content.source ? (
-									<a
-										rel="noreferrer"
-										target="_blank"
-										href={component.content.source}
-										className="btn btn-outline-primary mb-4"
-									>
-										GO TO THE SOURCE
-									</a>
+									<div className="bg-light border rouned p-3">
+										<p className="text-justify">
+											{component.content.sourceDesc}
+										</p>
+										<a
+											rel="noreferrer"
+											target="_blank"
+											href={component.content.source}
+											className="btn btn-outline-primary"
+										>
+											GO TO THE SOURCE
+										</a>
+									</div>
 								) : (
 									<React.Fragment />
 								)}
@@ -127,7 +133,7 @@ export default function ComponentBlocks({ component }) {
 						width: "100%",
 					}}
 				>
-					<div className="position-fixed">
+					<div className="position-fixed border-left pl-2 bg-white">
 						<p className="h5 mt-6 position-sticky">Table of contents</p>
 						<Nav
 							vertical
@@ -192,11 +198,15 @@ const mapBlocks = (blocks, id, name) => {
 		<section id={`${id}-section`}>
 			<Stagger in>
 				<Fade in>
-					{blocks.map((block) => {
+					{blocks.map((block, index) => {
 						if (!navItems.includes(block.name))
 							navItems = navItems.concat(block.name);
 						return (
-							<div className="mb-5" id={block.name} key={block.name}>
+							<div
+								className="mb-5"
+								id={block.name}
+								key={`${block.name}-${id}-${index}`}
+							>
 								<h3 className="text-truncate">{block.name}</h3>
 								<p className="text-justify mb-3">{block.description}</p>
 								{id === "Properties" ? (
@@ -208,7 +218,7 @@ const mapBlocks = (blocks, id, name) => {
 										{block.paramTypes.map((type, index) => (
 											<ColorPill
 												type={type}
-												key={`${block.name}-${type}-${index}`}
+												key={`${block.name}-params-${type}-${index}`}
 											>
 												{type}
 											</ColorPill>
@@ -251,7 +261,7 @@ const mapBlocks = (blocks, id, name) => {
 											<ColorPill
 												color="#BDBDBD"
 												textColor="black"
-												key={`${block.name}-${type}-${index}`}
+												key={`${block.name}-${type}-blocks-${index}`}
 											>
 												{type}
 											</ColorPill>
@@ -297,8 +307,8 @@ const mapBlocks = (blocks, id, name) => {
 																</tr>
 															</thead>
 															<tbody>
-																{block.params.map((param) => (
-																	<tr key={param.name}>
+																{block.params.map((param, index) => (
+																	<tr key={`${param.name}-p-${index}`}>
 																		<th
 																			className="align-middle bg-light"
 																			scope="row"

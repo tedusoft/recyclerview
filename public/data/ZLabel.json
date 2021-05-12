@@ -1,0 +1,361 @@
+{
+	"icon": "label.png",
+	"title": "ZLabel",
+	"group": "Widgets",
+	"content": {
+		"overview": "It allows to model a new label widget model.",
+		"blocks": {
+			"methods": [
+				{
+					"name": "New",
+					"description": "Adds a new ZLabel model to the model layout of the RecyclerView which is synced.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "parent",
+							"type": "Text"
+						},
+						{
+							"name": "props",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "BuildProps",
+					"description": "Returns a new property set containing the previously defined properties.",
+					"params": [
+						{
+							"name": "*",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "SetFontTypeface",
+					"description": "Changes the font of the widget.",
+					"params": [
+						{
+							"name": "asset",
+							"type": "Text"
+						}
+					],
+					"info": [
+						"Using this method instead of defining the font in the widget model may cause significant performance losses."
+					]
+				},
+				{
+					"name": "SetFontSize",
+					"description": "Changes the font size of the widget.",
+					"params": [
+						{
+							"name": "size",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetMaxLines",
+					"description": "This method changes the maximum number of lines that the widget will have.",
+					"params": [
+						{
+							"name": "max",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetMinLines",
+					"description": "This method changes the minimum number of lines that the widget will have.",
+					"params": [
+						{
+							"name": "min",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetJustify",
+					"description": "This method changes the justification of the widget text.",
+					"params": [
+						{
+							"name": "enabled",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetTextAlign",
+					"description": "This method changes the alignment of the text.",
+					"params": [
+						{
+							"name": "alignment",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetTextColor",
+					"description": "This method changes the color of the text.",
+					"params": [
+						{
+							"name": "color",
+							"type": "Text"
+						},
+						{
+							"name": "color",
+							"type": "Color"
+						}
+					]
+				},
+				{
+					"name": "SetMarquee",
+					"description": "Changes the state of the widget's moving text.",
+					"params": [
+						{
+							"name": "enabled",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetText",
+					"description": "Changes the text of the widget.",
+					"params": [
+						{
+							"name": "text",
+							"type": "Text"
+						}
+					]
+				}
+			],
+			"properties": [
+				{
+					"name": "FontTypeface",
+					"description": "Specifies the font of the text.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "FontSize",
+					"description": "Specifies the size of the text.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Bold",
+					"description": "Specifies whether the text will be bold.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Italic",
+					"description": "Specifies whether the text will be italic.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MaxLines",
+					"description": "Specifies the maximum lines of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MinLines",
+					"description": "Specifies the minimum lines of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Justify",
+					"description": "Specifies whether the text will be justified.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "TextAlign",
+					"description": "Specifies the alignment of the text.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "TextColor",
+					"description": "Specifies the color of the text.",
+					"paramTypes": ["Color", "Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Marquee",
+					"description": "Specifies whether the text will be in motion.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"For the text to move, it has to exceed the size of the widget."
+					]
+				},
+				{
+					"name": "Text",
+					"description": "Specifies the default text for the widget.",
+					"paramTypes": ["Text"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"If the text will not change there is no reason to use the SetText method."
+					]
+				},
+				{
+					"name": "MaxWidth",
+					"description": "Specifies the maximum width that the widget can reach.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "MaxHeight",
+					"description": "Specifies the maximum height that the widget can reach.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "HtmlSupport",
+					"description": "Specifies whether the widget should handle the text in HTML format.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Background",
+					"description": "Specifies the background of the widget.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Elevation",
+					"description": "Specifies the elevation of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": [
+						"The widget displays a shadow according to its elevation.",
+						"In order for the shadow to be displayed, the widget must have a non-transparent background."
+					]
+				},
+				{
+					"name": "LayoutMetrics",
+					"description": "Specifies the set of properties that the parent of the widget will take to create the widget's measures.",
+					"paramTypes": ["PropertySet"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingLeft",
+					"description": "Specifies the space between the left edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingRight",
+					"description": "Specifies the space between the right edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingTop",
+					"description": "Specifies the space between the top edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "PaddingBottom",
+					"description": "Specifies the space between the bottom edge and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Padding",
+					"description": "Specifies the space between the edges and the content of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Enabled",
+					"description": "Specifies whether the widget is enabled.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Visible",
+					"description": "Specifies whether the widget is visible (true) or invisible (false).",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Being invisible, it does not occupy any space."]
+				},
+				{
+					"name": "Clickable",
+					"description": "Specifies whether the widget can be clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "LongClickable",
+					"description": "Specifies if the widget can be long clicked.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Alpha",
+					"description": "Specifies the opacity of the widget.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Range from 0.0 (0% visible) to 1.0 (100% visible)"]
+				},
+				{
+					"name": "AlignStart",
+					"description": "Text Alignment",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "AlignEnd",
+					"description": "Text Alignment",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "AlignCenter",
+					"description": "Text Alignment",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				}
+			]
+		}
+	}
+}

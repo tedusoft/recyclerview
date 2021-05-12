@@ -5,10 +5,6 @@ import {
 	Col,
 	Row,
 	Card,
-	CardTitle,
-	CardText,
-	CardBody,
-	Button,
 	Breadcrumb,
 	BreadcrumbItem,
 	Badge,
@@ -64,7 +60,7 @@ export default function Overview({ components, pageData, totalComponents }) {
 							<React.Fragment>
 								<Container>
 									<Row>
-										{Object.keys(components).map((key, index) => {
+										{Object.keys(components).map((key) => {
 											let comp = components[key];
 											let blockCount = 0;
 											const blocks = comp.content.blocks;
@@ -75,40 +71,41 @@ export default function Overview({ components, pageData, totalComponents }) {
 											if (blocks.properties !== undefined)
 												blockCount += blocks.properties.length;
 											return (
-												<Col xs="12" md="4" key={comp.name}>
-													<div ref={wave}>
-														<Card
+												<Col xs="12" md="6" lg="4" className="mt-2" key={key}>
+													<Card>
+														<div
+															className="container user-select-none"
+															ref={wave}
 															onClick={(e) => {
 																setTimeout(() => {
 																	history.push(`/components/${comp.title}`);
 																}, 250);
 															}}
 														>
-															<CardBody>
-																<CardTitle tag="h5">
-																	{comp.title}{" "}
-																	<Badge color="secondary">{blockCount}</Badge>
-																</CardTitle>
-																<hr />
-																<CardText
-																	className="text-justify"
-																	style={{
-																		display: "block",
-																		textOverflow: "ellipsis",
-																		wordWrap: "break-word",
-																		overflow: "hidden",
-																		maxHeight: "5.5em",
-																		lineHeight: "1.5em",
-																	}}
-																>
-																	{comp.content.overview}
-																</CardText>
-																<Button outline className="w-100">
-																	GO TO BLOCKS
-																</Button>
-															</CardBody>
-														</Card>
-													</div>
+															<Row className="d-flex align-items-center pb-2 pt-2">
+																<Col xs="auto">
+																	<img
+																		alt={comp.icon}
+																		src={`${process.env.PUBLIC_URL}/images/icons/${comp.icon}`}
+																	/>
+																</Col>
+																<Col className="d-flex justify-items-center flex-column">
+																	<p className="m-0 ">
+																		{comp.title}{" "}
+																		<Badge color="secondary">
+																			{blockCount}
+																		</Badge>
+																	</p>
+																	<p className="m-0  text-muted">
+																		{comp.group}
+																	</p>
+																</Col>
+																<Col xs="auto">
+																	<span className="fa fa-chevron-right text-secondary rounded p-2 bg-light" />
+																</Col>
+															</Row>
+														</div>
+													</Card>
 												</Col>
 											);
 										})}

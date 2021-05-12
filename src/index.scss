@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import "~font-awesome/css/font-awesome.css";
 $primary: #7d88b2;
-$dark-blue: #5c6482;
+$secondary: #6b7290;
+$dark-blue: #181c27;
 $theme-colors: (
 	"primary": $primary,
 	"dark": $dark-blue,
-	"secondary": $dark-blue,
+	"secondary": $secondary,
 );
 $font-size-base: 0.85rem;
 $font-family-base: "Poppins", "sans-serif";

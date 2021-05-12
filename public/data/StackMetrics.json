@@ -1,5 +1,5 @@
 {
-	"name": "stackmetrics",
+	"icon": "stack.png",
 	"title": "StackMetrics",
 	"group": "Widgets",
 	"content": {
@@ -8,7 +8,13 @@
 			"methods": [
 				{
 					"name": "BuildProps",
-					"description": "Returns a new property set containing the previously defined properties."
+					"description": "Returns a new property set containing the previously defined properties.",
+					"params": [
+						{
+							"name": "*",
+							"type": "PropertySet"
+						}
+					]
 				}
 			],
 			"properties": [

@@ -9,13 +9,54 @@ import {
 	Row,
 	Col,
 	Container,
+	Badge,
 } from "reactstrap";
 import "./appbar.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { AppbarContext } from "../../hooks/useAppbar";
 import { withSnackbar } from "react-simple-snackbar";
+
+const BuyNowButton = function ({ pickedProducts }) {
+	return (
+		<Route
+			render={({ location }) => {
+				return location.pathname !== "/buy-now/checkout" ? (
+					<React.Fragment>
+						<NavItem className="m-1">
+							<NavLink to="/buy-now" exact>
+								<Button className="rounded-pill w-100 position-relative">
+									<span className=" fa fa-shopping-cart"></span>
+									<span className="d-inline d-md-none d-lg-inline">
+										{" "}
+										Buy now{" "}
+									</span>
+								</Button>
+							</NavLink>
+						</NavItem>
+						{pickedProducts.length > 0 ? (
+							<NavItem className="m-1">
+								<NavLink to="/buy-now/checkout" exact>
+									<Button
+										className="rounded-pill w-100 text-dark "
+										color="info"
+									>
+										<span className="fa fa-paypal"></span>
+										<Badge color="dark">{pickedProducts.length}</Badge>
+										<span className="d-inline d-md-none d-lg-inline">
+											{" Checkout"}
+										</span>
+									</Button>
+								</NavLink>
+							</NavItem>
+						) : null}
+					</React.Fragment>
+				) : null;
+			}}
+		/>
+	);
+};
 
 class AppBar extends Component {
 	constructor(props) {
@@ -38,7 +79,7 @@ class AppBar extends Component {
 	}
 
 	handleScroll(e) {
-		if (window.scrollY < 50) {
+		if (window.scrollY < 1) {
 			if (this.state.reachedTop !== true)
 				this.setState({
 					reachedTop: true,
@@ -90,7 +131,7 @@ class AppBar extends Component {
 							style={{ filter: "grayscale(100%)" }}
 							width="30px"
 							height="30px"
-							src="/images/icon.svg"
+							src={`${process.env.PUBLIC_URL}/images/icon.svg`}
 							className="mr-3 d-none d-md-inline"
 							alt="Extension"
 						/>
@@ -130,18 +171,7 @@ class AppBar extends Component {
 									<span className="fa fa-th-large"></span> Components
 								</NavLink>
 							</NavItem>
-							<NavItem>
-								<NavLink
-									to="/buy-now"
-									className={this.getNavItemClass("/buy-now")}
-									activeClassName="activeNavLink"
-									exact
-								>
-									<Button className="rounded-pill w-100">
-										<span className="fa fa-paypal"></span> Buy Now
-									</Button>
-								</NavLink>
-							</NavItem>
+							<BuyNowButton pickedProducts={this.props.pickedProducts} />
 						</Nav>
 					</Collapse>
 				</Navbar>
@@ -202,10 +232,7 @@ export class SearchBox extends React.Component {
 					<Col xs="12" className="mt-3 mb-3">
 						<Container className="w-auto d-flex flex-row justify-content-end">
 							<Row form>
-								<Col
-									xs="12"
-									className="px-0 mx-0 position-relative d-flex justify-content-end"
-								>
+								<Col xs="12" className="px-0 mx-0 d-flex justify-content-end">
 									<Input
 										id="searchBox"
 										onChange={(e) => {
@@ -220,7 +247,7 @@ export class SearchBox extends React.Component {
 										}}
 										value={this.state.searchText}
 										placeholder="Search block..."
-										className={"w-100 position-relative "}
+										className="w-100"
 									/>
 									<Button
 										className={"mx-0 h-100 "}
