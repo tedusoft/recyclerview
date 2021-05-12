@@ -1,14 +1,14 @@
 {
-	"icon": "button.png",
-	"title": "ZButton",
+	"icon": "arrange.png",
+	"title": "ZLinear",
 	"group": "Widgets",
 	"content": {
-		"overview": "It allows to model a new button widget model.",
+		"overview": "It allows to model a new linear widget model.",
 		"blocks": {
 			"methods": [
 				{
 					"name": "New",
-					"description": "Adds a new ZButton model to the model layout of the RecyclerView which is synced.",
+					"description": "Adds a new ZLinear model to the model layout of the RecyclerView which is synced.",
 					"params": [
 						{
 							"name": "name",
@@ -35,40 +35,57 @@
 					]
 				},
 				{
-					"name": "SetText",
-					"description": "Changes the text of the ZButton widget.",
+					"name": "SetHorizontalGravity",
+					"description": "This method changes the horizontal gravity of the widget.",
 					"params": [
 						{
-							"name": "text",
-							"type": "Text"
+							"name": "gravity",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetVerticalGravity",
+					"description": "This method changes the vertical gravity of the widget.",
+					"params": [
+						{
+							"name": "gravity",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetDirection",
+					"description": "This method changes the direction of the widget.",
+					"params": [
+						{
+							"name": "direction",
+							"type": "Number"
 						}
 					]
 				}
 			],
 			"properties": [
 				{
-					"name": "TrailingImage",
-					"description": "Specifies the image to be displayed at the start of the button.",
-					"paramTypes": ["PropertySet"],
+					"name": "Direction",
+					"description": "Specifies the direction of the widget.",
+					"paramTypes": ["Number"],
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"]
 				},
 				{
-					"name": "LeadingImage",
-					"description": "Specifies the image to be displayed at the end of the button.",
-					"paramTypes": ["PropertySet"],
+					"name": "HorizontalGravity",
+					"description": "Specifies the horizontal gravity of the widget.",
+					"paramTypes": ["Number"],
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"]
 				},
 				{
-					"name": "Label",
-					"description": "Specifies the button text.",
-					"paramTypes": ["Text", "PropertySet"],
+					"name": "VerticalGravity",
+					"description": "SSpecifies the vertical gravity of the widget.",
+					"paramTypes": ["Number"],
 					"blockTypes": ["Write"],
-					"presentation": ["Blocks"],
-					"info": [
-						"To edit the style of the text you have to place a set of properties exported by the ZLabel object."
-					]
+					"presentation": ["Blocks"]
 				},
 				{
 					"name": "Background",
@@ -166,6 +183,41 @@
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"],
 					"info": ["Range from 0.0 (0% visible) to 1.0 (100% visible)"]
+				},
+				{
+					"name": "GravityStart",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "GravityEnd",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "GravityCenter",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "DirectionHorizontal",
+					"description": "Linear Direction.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "DirectionVertical",
+					"description": "Linear Direction.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
 				}
 			]
 		}

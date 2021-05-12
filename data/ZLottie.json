@@ -1,14 +1,70 @@
 {
-	"icon": "button.png",
-	"title": "ZButton",
+	"icon": "lottie.png",
+	"title": "ZLottie",
 	"group": "Widgets",
 	"content": {
-		"overview": "It allows to model a new button widget model.",
+		"overview": "It allows to model a new lottie widget model.",
 		"blocks": {
+			"events": [
+				{
+					"name": "AnimationEnd",
+					"description": "Event called by widgets when their animation ends.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "group",
+							"type": "Group"
+						},
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "AnimationStart",
+					"description": "Event called by widgets when their animation starts.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "group",
+							"type": "Group"
+						},
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "AnimationRepeat",
+					"description": "Event called by widgets when their animation loops.",
+					"params": [
+						{
+							"name": "name",
+							"type": "Text"
+						},
+						{
+							"name": "group",
+							"type": "Group"
+						},
+						{
+							"name": "position",
+							"type": "Number"
+						}
+					]
+				}
+			],
 			"methods": [
 				{
 					"name": "New",
-					"description": "Adds a new ZButton model to the model layout of the RecyclerView which is synced.",
+					"description": "Adds a new ZLottie model to the model layout of the RecyclerView which is synced.",
 					"params": [
 						{
 							"name": "name",
@@ -35,40 +91,119 @@
 					]
 				},
 				{
-					"name": "SetText",
-					"description": "Changes the text of the ZButton widget.",
+					"name": "GetCurrentFrame",
+					"description": "Returns the frame that is being displayed.",
 					"params": [
 						{
-							"name": "text",
-							"type": "Text"
+							"name": "*",
+							"type": "Number"
 						}
 					]
+				},
+				{
+					"name": "GetFrameCount",
+					"description": "Returns the total number of frames.",
+					"params": [
+						{
+							"name": "*",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "IsAnimating",
+					"description": "Returns if the animation is playing.",
+					"params": [
+						{
+							"name": "*",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "PauseAnimation",
+					"description": "This method pauses the animation."
+				},
+				{
+					"name": "ResumeAnimation",
+					"description": "This method resumes the animation."
+				},
+				{
+					"name": "StartAnimation",
+					"description": "This method starts the animation."
+				},
+				{
+					"name": "SetCurrentFrame",
+					"description": "Changes the current frame of the animation."
+				},
+				{
+					"name": "StartFrame",
+					"description": "Changes the start frame of the animation.",
+					"params": [
+						{
+							"name": "frame",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "EndFrame",
+					"description": "Changes the end frame of the animation.",
+					"params": [
+						{
+							"name": "frame",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetSpeed",
+					"description": "Changes the speed of the animation.",
+					"params": [
+						{
+							"name": "speed",
+							"type": "Number"
+						}
+					],
+					"info": ["Normal speed is 1.0"]
 				}
 			],
 			"properties": [
 				{
-					"name": "TrailingImage",
-					"description": "Specifies the image to be displayed at the start of the button.",
-					"paramTypes": ["PropertySet"],
+					"name": "Source",
+					"description": "Specifies the animation file name.",
+					"paramTypes": ["Text"],
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"]
 				},
 				{
-					"name": "LeadingImage",
-					"description": "Specifies the image to be displayed at the end of the button.",
-					"paramTypes": ["PropertySet"],
-					"blockTypes": ["Write"],
-					"presentation": ["Blocks"]
-				},
-				{
-					"name": "Label",
-					"description": "Specifies the button text.",
-					"paramTypes": ["Text", "PropertySet"],
+					"name": "AnimationSpeed",
+					"description": "Specifies the speed of the animation.",
+					"paramTypes": ["Number"],
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"],
-					"info": [
-						"To edit the style of the text you have to place a set of properties exported by the ZLabel object."
-					]
+					"defValue": "1.0"
+				},
+				{
+					"name": "LoopAnimation",
+					"description": "Specifies whether the animation will play in an infinite loop.",
+					"paramTypes": ["Boolean"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "StartFrame",
+					"description": "Specifies the start frame for the animation.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "EndFrame",
+					"description": "Specifies the end frame for the animation.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"]
 				},
 				{
 					"name": "Background",

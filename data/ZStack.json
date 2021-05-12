@@ -1,14 +1,16 @@
 {
-	"icon": "button.png",
-	"title": "ZButton",
+	"icon": "stack.png",
+	"title": "ZStack",
 	"group": "Widgets",
 	"content": {
-		"overview": "It allows to model a new button widget model.",
+		"overview": "It allows to model a new stack widget model. Based on the Android RelativeLayout widget.",
+		"source": "https://developer.android.com/guide/topics/ui/layout/relative",
+		"sourceDesc": "RelativeLayout is a view group that displays child views in relative positions. The position of each view can be specified as relative to sibling elements (such as to the left-of or below another view) or in positions relative to the parent RelativeLayout area (such as aligned to the bottom, left or center).",
 		"blocks": {
 			"methods": [
 				{
 					"name": "New",
-					"description": "Adds a new ZButton model to the model layout of the RecyclerView which is synced.",
+					"description": "Adds a new ZStack model to the model layout of the RecyclerView which is synced.",
 					"params": [
 						{
 							"name": "name",
@@ -35,40 +37,40 @@
 					]
 				},
 				{
-					"name": "SetText",
-					"description": "Changes the text of the ZButton widget.",
+					"name": "SetHorizontalGravity",
+					"description": "This method changes the horizontal gravity of the widget.",
 					"params": [
 						{
-							"name": "text",
-							"type": "Text"
+							"name": "gravity",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetVerticalGravity",
+					"description": "This method changes the vertical gravity of the widget.",
+					"params": [
+						{
+							"name": "gravity",
+							"type": "Number"
 						}
 					]
 				}
 			],
 			"properties": [
 				{
-					"name": "TrailingImage",
-					"description": "Specifies the image to be displayed at the start of the button.",
-					"paramTypes": ["PropertySet"],
+					"name": "HorizontalGravity",
+					"description": "Specifies the horizontal gravity of the widget.",
+					"paramTypes": ["Number"],
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"]
 				},
 				{
-					"name": "LeadingImage",
-					"description": "Specifies the image to be displayed at the end of the button.",
-					"paramTypes": ["PropertySet"],
+					"name": "VerticalGravity",
+					"description": "SSpecifies the vertical gravity of the widget.",
+					"paramTypes": ["Number"],
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"]
-				},
-				{
-					"name": "Label",
-					"description": "Specifies the button text.",
-					"paramTypes": ["Text", "PropertySet"],
-					"blockTypes": ["Write"],
-					"presentation": ["Blocks"],
-					"info": [
-						"To edit the style of the text you have to place a set of properties exported by the ZLabel object."
-					]
 				},
 				{
 					"name": "Background",
@@ -166,6 +168,27 @@
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"],
 					"info": ["Range from 0.0 (0% visible) to 1.0 (100% visible)"]
+				},
+				{
+					"name": "GravityStart",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "GravityEnd",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "GravityCenter",
+					"description": "Linear Gravity.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
 				}
 			]
 		}

@@ -1,14 +1,14 @@
 {
-	"icon": "button.png",
-	"title": "ZButton",
+	"icon": "card.png",
+	"title": "ZCard",
 	"group": "Widgets",
 	"content": {
-		"overview": "It allows to model a new button widget model.",
+		"overview": "It allows to model a new card widget model.",
 		"blocks": {
 			"methods": [
 				{
 					"name": "New",
-					"description": "Adds a new ZButton model to the model layout of the RecyclerView which is synced.",
+					"description": "Adds a new Card widget model to the model layout of the RecyclerView which is synced.",
 					"params": [
 						{
 							"name": "name",
@@ -35,57 +35,76 @@
 					]
 				},
 				{
-					"name": "SetText",
-					"description": "Changes the text of the ZButton widget.",
+					"name": "SetRadius",
+					"description": "Changes the radius of the corners of the card widget.",
 					"params": [
 						{
-							"name": "text",
+							"name": "radius",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetBackgroundColor",
+					"description": "Changes the background color of the card.",
+					"params": [
+						{
+							"name": "color",
+							"type": "Color"
+						},
+						{
+							"name": "color",
 							"type": "Text"
+						}
+					]
+				},
+				{
+					"name": "SetCardElevation",
+					"description": "Changes the elevation of the card.",
+					"params": [
+						{
+							"name": "elevation",
+							"type": "Number"
 						}
 					]
 				}
 			],
 			"properties": [
 				{
-					"name": "TrailingImage",
-					"description": "Specifies the image to be displayed at the start of the button.",
-					"paramTypes": ["PropertySet"],
+					"name": "Radius",
+					"description": "Specifies the radius of the corners of the card.",
+					"paramTypes": ["Number"],
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"]
-				},
-				{
-					"name": "LeadingImage",
-					"description": "Specifies the image to be displayed at the end of the button.",
-					"paramTypes": ["PropertySet"],
-					"blockTypes": ["Write"],
-					"presentation": ["Blocks"]
-				},
-				{
-					"name": "Label",
-					"description": "Specifies the button text.",
-					"paramTypes": ["Text", "PropertySet"],
-					"blockTypes": ["Write"],
-					"presentation": ["Blocks"],
-					"info": [
-						"To edit the style of the text you have to place a set of properties exported by the ZLabel object."
-					]
 				},
 				{
 					"name": "Background",
 					"description": "Specifies the background of the widget.",
 					"paramTypes": ["PropertySet"],
 					"blockTypes": ["Write"],
-					"presentation": ["Blocks"]
+					"presentation": ["Blocks"],
+					"info": [
+						"If you only want to change the color of the card, it is preferable to use the BackgroundColor.",
+						"It does not maintain the radius of the corners of the card."
+					]
 				},
 				{
-					"name": "Elevation",
-					"description": "Specifies the elevation of the widget.",
+					"name": "BackgroundColor",
+					"description": "Specifies the background color of the card.",
+					"paramTypes": ["Text", "Color"],
+					"blockTypes": ["Write"],
+					"presentation": ["Blocks"],
+					"info": ["Maintains the radius of the edges of the card."]
+				},
+				{
+					"name": "CardElevation",
+					"description": "Specifies the elevation of the card.",
 					"paramTypes": ["Number"],
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"],
 					"info": [
-						"The widget displays a shadow according to its elevation.",
-						"In order for the shadow to be displayed, the widget must have a non-transparent background."
+						"The card displays a shadow according to its elevation.",
+						"In order for the shadow to be displayed, the card must have a non-transparent background color."
 					]
 				},
 				{

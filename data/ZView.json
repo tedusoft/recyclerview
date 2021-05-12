@@ -1,14 +1,14 @@
 {
-	"icon": "button.png",
-	"title": "ZButton",
+	"icon": "view.png",
+	"title": "ZView",
 	"group": "Widgets",
 	"content": {
-		"overview": "It allows to model a new button widget model.",
+		"overview": "It allows to model a new widget model. The methods in this component can be applied in any widget.",
 		"blocks": {
 			"methods": [
 				{
 					"name": "New",
-					"description": "Adds a new ZButton model to the model layout of the RecyclerView which is synced.",
+					"description": "Adds a new ZView model to the model layout of the RecyclerView which is synced.",
 					"params": [
 						{
 							"name": "name",
@@ -35,41 +35,127 @@
 					]
 				},
 				{
-					"name": "SetText",
-					"description": "Changes the text of the ZButton widget.",
+					"name": "DefaultProps",
+					"description": "Returns an empty property set.",
 					"params": [
 						{
-							"name": "text",
-							"type": "Text"
+							"name": "*",
+							"type": "PropertySet"
+						}
+					]
+				},
+				{
+					"name": "SetElevation",
+					"description": "Changes the elevation of the widget.",
+					"params": [
+						{
+							"name": "elevation",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPaddingLeft",
+					"description": "This method changes the left padding of the widget.",
+					"params": [
+						{
+							"name": "paddingLeft",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPaddingTop",
+					"description": "This method changes the top padding of the widget.",
+					"params": [
+						{
+							"name": "paddingTop",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPaddingRight",
+					"description": "This method changes the right padding of the widget.",
+					"params": [
+						{
+							"name": "paddingRight",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPaddingBottom",
+					"description": "This method changes the bottom padding of the widget.",
+					"params": [
+						{
+							"name": "paddingBottom",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetPadding",
+					"description": "This method changes the padding of the widget.",
+					"params": [
+						{
+							"name": "padding",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetEnabled",
+					"description": "This method sets the widget as enabled or disabled.",
+					"params": [
+						{
+							"name": "enabled",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetVisible",
+					"description": "This method changes the visibility of the widget.",
+					"params": [
+						{
+							"name": "visibility",
+							"type": "Number"
+						}
+					]
+				},
+				{
+					"name": "SetClickable",
+					"description": "This method changes if the widget responds to click events.",
+					"params": [
+						{
+							"name": "clickable",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetLongClickable",
+					"description": "This method changes if the widget responds to long click events.",
+					"params": [
+						{
+							"name": "longClickable",
+							"type": "Boolean"
+						}
+					]
+				},
+				{
+					"name": "SetAlpha",
+					"description": "This method changes the opacity of the widget.",
+					"params": [
+						{
+							"name": "alpha",
+							"type": "Number"
 						}
 					]
 				}
 			],
 			"properties": [
-				{
-					"name": "TrailingImage",
-					"description": "Specifies the image to be displayed at the start of the button.",
-					"paramTypes": ["PropertySet"],
-					"blockTypes": ["Write"],
-					"presentation": ["Blocks"]
-				},
-				{
-					"name": "LeadingImage",
-					"description": "Specifies the image to be displayed at the end of the button.",
-					"paramTypes": ["PropertySet"],
-					"blockTypes": ["Write"],
-					"presentation": ["Blocks"]
-				},
-				{
-					"name": "Label",
-					"description": "Specifies the button text.",
-					"paramTypes": ["Text", "PropertySet"],
-					"blockTypes": ["Write"],
-					"presentation": ["Blocks"],
-					"info": [
-						"To edit the style of the text you have to place a set of properties exported by the ZLabel object."
-					]
-				},
 				{
 					"name": "Background",
 					"description": "Specifies the background of the widget.",
@@ -166,6 +252,27 @@
 					"blockTypes": ["Write"],
 					"presentation": ["Blocks"],
 					"info": ["Range from 0.0 (0% visible) to 1.0 (100% visible)"]
+				},
+				{
+					"name": "Visible*",
+					"description": "Widget visibility.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Invisible",
+					"description": "Widget visibility.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
+				},
+				{
+					"name": "Gone",
+					"description": "Widget visibility.",
+					"paramTypes": ["Number"],
+					"blockTypes": ["Read"],
+					"presentation": ["Blocks"]
 				}
 			]
 		}

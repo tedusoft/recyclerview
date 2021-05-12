@@ -1,5 +1,5 @@
 {
-	"name": "linearmetrics",
+	"icon": "arrange.png",
 	"title": "LinearMetrics",
 	"group": "Widgets",
 	"content": {
@@ -8,7 +8,13 @@
 			"methods": [
 				{
 					"name": "BuildProps",
-					"description": "Returns a new property set containing the previously defined properties."
+					"description": "Returns a new property set containing the previously defined properties.",
+					"params": [
+						{
+							"name": "*",
+							"type": "PropertySet"
+						}
+					]
 				},
 				{
 					"name": "SetBuildInMetrics",

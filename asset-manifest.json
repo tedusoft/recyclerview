@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/recyclerview/static/css/main.f29e0967.chunk.css",
-    "main.js": "/recyclerview/static/js/main.d9d893af.chunk.js",
-    "main.js.map": "/recyclerview/static/js/main.d9d893af.chunk.js.map",
-    "runtime-main.js": "/recyclerview/static/js/runtime-main.3c9bdbe2.js",
-    "runtime-main.js.map": "/recyclerview/static/js/runtime-main.3c9bdbe2.js.map",
+    "main.css": "/recyclerview/static/css/main.11fb6325.chunk.css",
+    "main.js": "/recyclerview/static/js/main.0581979e.chunk.js",
+    "main.js.map": "/recyclerview/static/js/main.0581979e.chunk.js.map",
+    "runtime-main.js": "/recyclerview/static/js/runtime-main.cf7481ff.js",
+    "runtime-main.js.map": "/recyclerview/static/js/runtime-main.cf7481ff.js.map",
     "static/css/2.633d8048.chunk.css": "/recyclerview/static/css/2.633d8048.chunk.css",
-    "static/js/2.198d88dd.chunk.js": "/recyclerview/static/js/2.198d88dd.chunk.js",
-    "static/js/2.198d88dd.chunk.js.map": "/recyclerview/static/js/2.198d88dd.chunk.js.map",
-    "static/js/3.e89ecfb4.chunk.js": "/recyclerview/static/js/3.e89ecfb4.chunk.js",
-    "static/js/3.e89ecfb4.chunk.js.map": "/recyclerview/static/js/3.e89ecfb4.chunk.js.map",
+    "static/js/2.cc6c1e62.chunk.js": "/recyclerview/static/js/2.cc6c1e62.chunk.js",
+    "static/js/2.cc6c1e62.chunk.js.map": "/recyclerview/static/js/2.cc6c1e62.chunk.js.map",
+    "static/js/3.7cacc5c3.chunk.js": "/recyclerview/static/js/3.7cacc5c3.chunk.js",
+    "static/js/3.7cacc5c3.chunk.js.map": "/recyclerview/static/js/3.7cacc5c3.chunk.js.map",
     "index.html": "/recyclerview/index.html",
     "static/css/2.633d8048.chunk.css.map": "/recyclerview/static/css/2.633d8048.chunk.css.map",
-    "static/css/main.f29e0967.chunk.css.map": "/recyclerview/static/css/main.f29e0967.chunk.css.map",
-    "static/js/2.198d88dd.chunk.js.LICENSE.txt": "/recyclerview/static/js/2.198d88dd.chunk.js.LICENSE.txt",
+    "static/css/main.11fb6325.chunk.css.map": "/recyclerview/static/css/main.11fb6325.chunk.css.map",
+    "static/js/2.cc6c1e62.chunk.js.LICENSE.txt": "/recyclerview/static/js/2.cc6c1e62.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/recyclerview/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.3c9bdbe2.js",
+    "static/js/runtime-main.cf7481ff.js",
     "static/css/2.633d8048.chunk.css",
-    "static/js/2.198d88dd.chunk.js",
-    "static/css/main.f29e0967.chunk.css",
-    "static/js/main.d9d893af.chunk.js"
+    "static/js/2.cc6c1e62.chunk.js",
+    "static/css/main.11fb6325.chunk.css",
+    "static/js/main.0581979e.chunk.js"
   ]
 }
